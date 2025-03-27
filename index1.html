@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Movie App</title>
+    <style>
+      header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        padding: 20px;
+      }
+      .title-change {
+  color: white; /* Makes "Movie" white */
+  font-size: 2.5rem; /* Adjust size as needed */
+  font-weight: bold; /* Makes it bold */
+}
+
+/* If you want "Boy1-show" to also be styled */
+h1 {
+  font-size: 2.5rem; /* Adjust size for "Boy1-show" */
+  color: white; /* Makes the whole title white */
+  text-align: center; /* Centers the text */
+}
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: white;
+        }
+      .logo-container {
+        display: flex;
+        gap: 15px;
+      }
+      .logo-container a {
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .logo-container img {
+        width: 150px;
+        height: 100px;
+        border-radius: 10px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+      .search-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .search-element {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 10px;
+      }
+    
+      #result-type-container {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+      .result-btn {
+        cursor: pointer;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: #09e52600;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .result-btn, .btn-primary {
+        cursor: pointer;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: #e50914;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .search {
+        padding: 10px;
+        width: 250px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      .btn-primary {
+        background-color: #e50914;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .btn-primary:hover {
+        background-color: #b20710;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <a href="https://www.netflix.com" target="_blank">
+          <img src="net.png" alt="Netflix">
+        </a>
+        <a href="https://www.hulu.com" target="_blank">
+          <img src="hulu.png" alt="Hulu">
+        </a>
+        <a href="https://www.disneyplus.com" target="_blank">
+          <img src="disney.png" alt="Disney+">
+        </a>
+        <a href="https://www.primevideo.com" target="_blank">
+          <img src="images.png" alt="Prime Video">
+        </a>
+        <a href="https://www.hbomax.com" target="_blank">
+            <img src="hbo-logo.avif" alt="HBO Max">
+        </a>
+        <a href="https://www.apple.com/apple-tv-plus/" target="_blank">
+            <img src="apple.png" alt="Apple TV+">
+        </a>
+        <a href="https://www.ondemandkorea.com" target="_blank">
+            <img src="Korea.png" alt="OnDemandKorea">
+          </a>          
+      </div>
+      <div class="search-container">
+        <h1><span class="title-change">MOVIE</span> BOY1-SHOW</h1>
+        <ul id="result-type-container" class="list-inline mt-3">
+          <li><button class="result-btn movie-results">Movies</button></li>
+          <li><button class="result-btn tv-results">TV</button></li>
+          <li><button class="result-btn all-results">Both</button></li>
+        </ul>
+        <form id="form">
+          <input type="text" id="search" class="search" placeholder="Search">
+          <button type="submit" id="searchBtn" class="btn-primary">Search</button>
+        </form>
+      </div>
+    </header>
+
+    <!-- Search Results -->
+    <div id="searchResults" class="mt-4"></div>
+
+    <main id="main"></main>
+
+    <script src="script.js"></script>
+    <script src="script1.js"></script>
+  </body>
+</html>
